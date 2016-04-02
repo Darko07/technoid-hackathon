@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script type="text/javascript" src="java/jquery.min.js"></script>
+        <script src="java/cursordivscroll.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/techagaaz.css" />
+    </head>
+    <body>
+        <p id="techAghaaz" style=" position: fixed; transition: opacity 1s; z-index: 9999; font-family: segoe UI; font-size: 130px; left: 50%;
+           top: 50%; transform: translateX(-50%) translateY(-60%); color: white;">Technoid<span id="text2015" style="position: absolute;font-size: 30px;
+                        bottom: -14px; transform: translateX(-70%);">2015</span></p>
+        <img src="techaghaazImages/technoid1.png" id="logoTopDesktop" />
+        <img src="techaghaazImages/iist.png" id="iistLogoDesktop"/>
+        <ul id="links">
+            <a href="#"><li class="linksLi" onclick="$('#team').css('display', 'block');
+                    setTimeout(function () {
+                        $('#team').css('opacity', '1');
+                    }, 100);">TEAM</li></a>
+
+        </ul>
+        <div id="team" style="display: none; transition: opacity 0.5s; opacity: 0; overflow-y:scroll; 
+             background-image: url('techaghaazImages/blurredBG.png');z-index: 999;width:100%;height:100%;position: fixed;background-size: 100% 100%;">
+            <div onclick="$('#team').css('opacity', '0');
+                    setTimeout(function () {
+                        $('#team').css('display', 'none');
+                    }, 600);" style="background-image: url('techaghaazImages/closewhite.png');position:fixed; right:15px;top:10px; z-index: 9999; 
+                 height:40px;width:40px;background-size: 100% 100%; "></div>  
+            <!--p style="font-family:segoe UI;font-size: 50px;color:#e6e6e6; position: absolute; top:30px; left:50%; transform: translateX(-50%);">TEAM</p>
+            <p style="font-family:segoe UI;font-size: 30px;color:#e6e6e6; position: absolute; top:130px; left:50%; transform: translateX(-50%);">
+                Developers</p>
+
+            <div style="background-image: url('cropped/vimarsh tiwari.jpg'); height:100px; width: 100px; position: absolute; 
+                 top:240px; left: 250px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:350px; left:230px;">Vimarsh Tiwari (CSE)</p>;
+
+            <div style="background-image: url('cropped/akash mishra.jpg'); height:100px; width: 100px; position: absolute; top:240px; left: 640px; 
+                 background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:350px; left:630px;">Akash Mishra (CSE)</p>;
+
+            <div style="background-image: url('cropped/payas pandey.jpg'); height:100px; width: 100px; position: absolute; top:240px; left: 1000px;
+                 background-size: 100% 100%;border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:350px; left:985px;">Payas Pandey (CSE)</p-->;
+
+
+            <p style="font-family:segoe UI;font-size: 50px;color:#e6e6e6; position: absolute; top:30px; left:50%; transform: translateX(-50%); ">
+                CORE COMMITTEE</p> 
+<div id="team-container" style="position: absolute; top: -350px; left: 0px;">
+
+            
+			
+			<div style="background-image: url('cropped/shubham geete.jpg'); height:100px; width: 100px; position: absolute; top:550px; 
+                 left: 240px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:665px; left:240px;">Shubham Geete</p>;
+			
+
+			
+            <div style="background-image: url('cropped/ekansh pandit.jpg'); height:100px; width: 100px; position: absolute; top:550px; 
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:665px; left:510px;">Ekansh Pandit</p>;
+
+            <div style="background-image: url('cropped/abhishek baldua.jpg'); height:100px; width: 100px; position: absolute; top:550px; 
+                 left: 750px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:665px; left:730px;">Abhishek Baldua</p>;
+
+            <div style="background-image: url('cropped/shubhankar pol.jpg'); height:100px; width: 100px; position: absolute; top:550px; 
+                 left: 1000px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:665px; left:990px;">Shubhankar Pol</p>;
+
+
+            <div style="background-image: url('cropped/apeksha modi.jpg'); height:100px; width: 100px; position: absolute; top:750px; 
+                 left: 240px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:865px; left:220px;">Apeksha Modi</p>;
+
+            
+
+            <div style="background-image: url('cropped/jay jain.jpg'); height:100px; width: 100px; position: absolute;
+                 top:750px; left: 750px; background-size: 100% 100%; border-radius: 2000px;">
+
+            </div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:865px; left:730px;">Jay Jain</p>;
+
+            <div style="background-image: url('cropped/jaydeep singh saini.jpg'); height:100px; width: 100px; position: absolute; top:750px;
+                 left: 1000px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:865px; left:990px;">Jaydeep Singh Saini</p>;
+				
+				
+				<div style="background-image: url('cropped/aakansha neema.jpg'); height:100px; width: 100px; position: absolute; top:750px; 
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:865px; left:510px;">Aakansha Neema</p>;
+
+            <div style="background-image: url('cropped/lovely singh.jpg'); height:100px; width: 100px; position: absolute; top:950px; 
+                 left: 240px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1065px; left:220px;">Lovely Singh</p>;
+
+            <div style="background-image: url('cropped/mayank lambhate.jpg'); height:100px; width: 100px; position: absolute; top:950px;
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1065px; left:510px;">Mayank Lambhate</p>;
+
+            <div style="background-image: url('cropped/nitansh vaidhya.jpg'); height:100px; width: 100px; position: absolute; top:950px; 
+                 left: 750px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1065px; left:730px;">Nitansh Vaidhya</p>;
+
+            <div style="background-image: url('cropped/payas pandey.jpg'); height:100px; width: 100px; position: absolute; top:950px; 
+                 left: 1000px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1065px; left:980px;">Payas Pandey</p>;
+
+
+            <div style="background-image: url('cropped/runjesh bargal.jpg'); height:100px; width: 100px; position: absolute; top:1150px;
+                 left: 240px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1265px; left:220px;">Runjesh Bargal</p>;
+
+            <div style="background-image: url('cropped/saransh pagey.jpg'); height:100px; width: 100px; position: absolute; top:1150px;
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1265px; left:510px;">Saransh Pagey</p>;
+
+            <div style="background-image: url('cropped/shakti prateek.jpg'); height:100px; width: 100px; position: absolute; top:1150px;
+                 left: 750px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1265px; left:730px;">Shakti Prateek</p>;
+
+            <div style="background-image: url('cropped/shobhana jha.jpg'); height:100px; width: 100px; position: absolute; top:1150px;
+                 left: 1000px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1265px; left:980px;">Shobhana Jha</p>;
+
+			
+			<div style="background-image: url('cropped/akash mishra.jpg'); height:100px; width: 100px; position: absolute; 
+                 top:1350px; left: 240px; background-size: 100% 100%; border-radius: 2000px;">
+
+            </div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1465px; left:220px;">Akash Mishra</p>;
+            
+
+			
+			
+            <div style="background-image: url('cropped/ada khan.jpg'); height:100px; width: 100px; position: absolute; top:1350px; 
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1465px; left:480px;">Ada Khan</p>;
+
+            <div style="background-image: url('cropped/soma sharma.jpg'); height:100px; width: 100px; position: absolute; top:1350px;
+                 left: 750px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1465px; left:730px;">Soma Sharma</p>;
+
+            <div style="background-image: url('cropped/utkarsh upadhyay.jpg'); height:100px; width: 100px; position: absolute;
+                 top:1350px; left: 1000px; background-size: 100% 100%; border-radius: 2000px;">
+
+            </div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1465px; left:980px;">Utkarsh Upadhyay</p>;
+
+
+            <div style="background-image: url('cropped/varun doshi.jpg'); height:100px; width: 100px; position: absolute; top:1550px; 
+                 left: 240px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1665px; left:230px;">Varun Doshi</p>;
+
+            <div style="background-image: url('cropped/vimarsh tiwari.jpg'); height:100px; width: 100px; position: absolute; top:1550px;
+                 left: 520px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1665px; left:490px;">Vimarsh Tiwari</p>;
+
+            <div style="background-image: url('cropped/yash jain.jpg'); height:100px; width: 100px; position: absolute; top:1550px;
+                 left: 750px; background-size: 100% 100%; border-radius: 2000px;"></div>
+            <p style="font-family: segoe UI; font-size:15px; color:white; position: absolute; top:1665px; left:730px;">Yash Jain</p>;
+</div>
+
+           
+
+        </div>
+        <div id="infoMaskDesktop">
+
+        </div>
+        <div id="eventInfoContDesktop">
+            <img id="closeDesktop" src="techaghaazImages/close.png" style="position: absolute; width: 64px; cursor: pointer; right: 0px; z-index: 99;" />
+            <div id="eventBannerContDesktop">
+
+            </div>
+            <div id="eventTextWrapperDesktop">
+                <div id="eventTextContDesktop">
+                    <div id="eventHeadingContDesktop">
+                        <p id="eventHeadingTextDesktop">Event Heading</p>
+                    </div>
+                    <div id="eventTextMainContDesktop">
+                        <div id="typeHeadingContDesktop">
+                            Overview
+                        </div>
+                        <div id="typeTextContDesktop">
+
+                        </div>
+                    </div>
+                    <div id="eventIconContDesktop">
+                        <div id="overview">
+
+                        </div>
+
+                        <div id="rules">
+
+                        </div>
+
+                        <div id="contacts">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="bodyDesktop">
+            <div id="eventsContainerDesktop">
+                <div class="eventBoxDesktop row1" id="event1">
+                    <div class="eventMask" data-textName="event1" data-overview="
+                         Entrepreneurship is now a day’s emerged and trending word. This competition invites participants to 
+                         present their innovative ideas on Entrepreneurship.  " 
+
+                         data-rules="
+                         REGISTRATION FEE PER STUDENT: Rs. 20/-<br> PRIZE:- <br> Rs.1500 (1st prize) <br> Rs. 1000 ( 2nd prize)    " 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <div class='contactIcons'>
+
+                         </div>
+                         <p class='contactNames'>
+                         Tayyab Ali 
+                         </p>
+                         <p class='contactNumbers'>
+                         9165122010
+                         </p>
+                         </div>"
+                         >
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event1Text">Article writing </p>
+                </div>
+
+                <div class="eventBoxDesktop row1" id="event2">
+                    <div class="eventMask" data-textName="event2" 
+                         data-overview="
+                         ROBORACE <br><br>
+                         More speed, more power with minimum time<br>
+                         Design a manually controlled ROBOT that has capacity to cover maximum distance in shortest possible time, 
+                         challenging the hurdles and be one of the best opponents. Think your robot can overcome any obstacle-big or 
+                         small in the least of time. If so get it on the track and let the game begin. And bear in mind that maximizing
+                         RPM does not make you winner but winners are those who have good presence of mind, sharpness and practice. <br> <br>
+                         PATH TRACKER<br> <br> 
+                         Robots should be attacking or defensive so as to get grip over the other one…
+                         "
+
+                         data-rules="EVENT TIME:1:00 PM onward <br> 
+                         DATE:DAY-1,2  <br>
+                         PLACE:B Block Cafeteria / Main Ground Stage. <br>
+                         Registration Fee per Team: 200/- for single event and 350/- for both Event." 
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         YASH SANT:8982568864
+                         </p>
+                         </div>
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         HIMANSHU SAWLE:9098343718
+                         </p>
+                         </div>
+                         <div id='profileCont''>
+                         <p align='center' class='contactContact'>
+                         VAIBHAV SAUNAKIYA:9589684006
+                         </p>
+                         </div>
+                         <div id='profileCont''>
+                         <p align='center' class='contactContact'>
+                         PRADEEP  KUMAR:9039193977
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event2Text">Robotics</p>
+                </div>
+
+                <div class="eventBoxDesktop row1" id="event3">
+                    <div class="eventMask" data-textName="event3" data-overview="There will be two rounds.<br>
+                         Screening: simple coding , error detection <br>
+                         Note: after first round only 10 teams will be selected. <br>
+                         Final: Large program to be assembled and removing the errors of the program and displaying the output of the program correctly.
+                         " 
+                         data-rules="
+                         EVENT TIME: 12:00 to 4:00 PM <br>  
+                         Date:19/sep/2015 <br> 
+                         Place:Computer lab C-block <br>
+                         REGISTRATION FEE: Rs 50/- per Team" 
+                         data-contacts="
+                         <p align='center' class='contactContact'>
+                         Aakarsh Mandloi 9039987647 <br>	
+                         Gourav Saha	 8962499357 <br>
+                         Adesh Vyas	9039987647	
+
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event3Text">Code Assembly Competition</p>
+                </div>
+
+                <div class="eventBoxDesktop row1" id="event4">
+                    <div class="eventMask" data-textName="event4" data-overview="
+                         An IS – 10262-2009 Code will be provided at the time of event. Participants will design a cube using this code. 
+                         The winner will be selected on the basis of time and accuracy." 
+                         data-rules="REGISTRATION FEE PER EVENT : Rs. 50" 
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Suyash Lachwani:9522023000<br>Arun Patel:8103656280
+
+                         </p>
+                         </div>
+
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event4Text">Design Mix of Concrete Cube</p>
+                </div>
+
+                <div class="eventBoxDesktop row1" id="event5">
+                    <div class="eventMask" data-textName="event5" data-overview="
+                         Round 1:Identify the electronic component with technical specification .<br>
+                         Round 2: Design a Circuit on Breadboard for given circuit diagram with the help of given component .
+                         " 
+                         data-rules="
+                         <ul><li> Students can Participate in a group or Single (Maximum member in a group will be 02). 
+                         </li><li>Registration fee Per Student: 50/</ul>" 
+
+                         data-contacts="
+
+                         <p align='center' class='contactContact'>
+                         Shreya shrimar:9770643650
+
+                         </p>
+                         </div>
+
+
+
+                         <p align='center' class='contactContact'>
+                         Vidushi rawal:9424517888
+
+
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event5Text">ELECTRONICS MANIA</p>
+                </div>
+
+                <div class="eventBoxDesktop row1" id="event6">
+                    <div class="eventMask" data-textName="event6" data-overview="
+                         Crossroad puzzles are fun activities intended for students of all ability levels.
+                         To answer a crossword question, first check the number in the puzzle.
+                         Then, look at clue below the puzzle. Now you can write in your answer in the space provided.
+                         You will find all of the puzzle clues written out in full below the puzzle. 
+                         The time for the event is restricted to 20 mins. The knowledge of basic science will be helpful. 
+                         We appreciate your patience." 
+                         data-rules="DATE:19/09/2015<br>
+                         PLACE:Seminar Hall A-Block <br>
+                         REGISTRATION FEE: Rs. 10 (IISTians) <br> Rs.20(Outsiders)"
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Nikhil Soni:7415869086
+                         </p>
+                         </div>
+
+
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Shubham Dubey:8109441644
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Shivang Bansal:9165962611	
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event6Text">CRACK ME </p>
+                </div>
+
+
+
+                <div class="eventBoxDesktop row2" id="event7">
+                    <div class="eventMask" data-textName="event7" data-overview="
+
+                         This game is restricted only to Director, Deans, HODs and faculty members of different departments of the institute.
+                         Its a technical snakes and ladders where instead of snake life threatening symbols are present and in place of ladder
+                         life saving opportunities are present.  A team of 4 including dean and faculty members will participate.   
+                         There will be a track of 50 numbers and a dice cube of 6 numbers.6 pots with different levels of questions will be provided.
+                         Each team will throw the dice and whatever the numbers comes they will be asked question from the same pot number.
+                         The rules will be provided to all departments before 2 days of event." 
+
+                         data-rules="DATE:18/09/2015 <br> 
+                         PLACE:Central Stairs <br>
+                         REGISTRATION FEE: Only faculties: Rs 500 each department" 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Anshul Sahoo:8827507376
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Aleem Khan:9039361390
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event7Text">ENTROPY RACE </p>
+                </div>
+
+                <div class="eventBoxDesktop row2" id="event8">
+                    <div class="eventMask" data-textName="event8" data-overview="
+                         Hackathon is an event where people come together to collaboratively
+                         build and launch mobile apps (any platform) or web apps aimed at solving a particular problem. 
+                         They will work in small groups of up to 4 people for 24 hours, the aim is to come up with a prototype 
+                         at the end of the Hackathon.The best prototype will have a chance to grab cash prizes upto 15k and 
+                         internships at top startups of indore"
+
+                         data-rules="<ul>
+                         <li>Date & Time:18sept,3pm onwards</li>
+                         <li>Venue:cafetaria ,B-block,iist campus </li>
+                         <li>Single participant FEE:Rs.150</li> 
+                         <li>Particpation in team(Max 4):Rs.250</li>
+                         <li>Prize:upto 15000 cash prize</li>
+                         <li>Internship at startups of indore</li>
+                         <li>Every team will have to pitch thier product followed by Q&A sessions with our judges </li>
+                         <li>Particapants are required to bring thier laptops or working stations with them.</li>
+                         <li>Food And beverages will be provided by the organizer for both days.</li>
+                         </ul>" 
+
+                         data-contacts="
+
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Vimarsh Tiwari(9981856464)
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Payas Pandey(9617807878)
+                         </p>
+                         </div>
+
+                         <div id='profileCont''>
+
+                         <p align='center' class='contactContact'>
+                         Akash Mishra(9039079130)
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event8Text">Hackathon </p>
+                </div>
+
+                <div class="eventBoxDesktop row2" id="event9">
+                    <div class="eventMask" data-textName="event9" data-overview="
+                         A.Set of electronics equipment will be shown, remember & reproduce.</br>
+                         B.The participants will be shown a slide show containing 30 different engineering components with their specifications; 
+                         each image will be shown for a mere 5-6 seconds and then they will be separated and will be asked to prepare a list of the 
+                         components they remember with the correct specifications.This round is based on the basic mugging power of the participants 
+                         and to check their concentration level!
+                         "
+                         data-rules="EVENT TIME: 2 to 4:00 PM  <br>
+                         DATE:18th and 19th<br> 
+                         PLACE:A Block Space in front of Seminar Hall.<br>
+                         REGISTRATION FEE PER STUDENT: Registration fee Per Student: 20/-"
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Varun Doshi:8109024443
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event9Text">RAM & ROM</p>
+                </div>
+
+                <div class="eventBoxDesktop row2" id="event10">
+                    <div class="eventMask" data-textName="event10" data-overview="
+                         Tambola is an interesting game. Here it’s a technical tambola. Every contestant will be provided with one ticket. 
+                         Each ticket contains 15 technical symbols. Every row in ticket contains 5 technical symbols. A clue will be 
+                         provided and the contestants are asked to cut the symbol present in their ticket. The rules will be declared on the spot." 
+
+                         data-rules="DATE:18/9/2015 <br>
+                         PLACE:Seminar Hall A-Block <br>
+                         REGISTRATION FEE : Rs. 20 (IISTians) / Rs30(Outsiders)" 
+
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Ashutosh Soni:9713114146
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event10Text">TECHOBOLA</p>
+                </div>
+
+                <div class="eventBoxDesktop row2" id="event11">
+                    <div class="eventMask" data-textName="event11" data-overview=" 
+                         Theme will be Green Energy.  Posters will be prepared by students before event. 
+                         On the day of event exhibition will be there. Team Size (1 to 4). 
+                         Participations may be from any discipline of Engineering. " 
+                         data-rules="EVENT TIME: 10:00AM to 01:00 PM <br>
+                         DATE: 19/09/2015  <br>
+                         PLACE:Corridor C Block<br>
+                         REGISTRATION FEE PER STUDENT : Rs. 30/- <br>
+                         PRIZE:- Rs. 1500 (1st prize)<br>
+                         Rs. 1000 ( 2nd prize)" 
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Azad Gopal:8602427469
+                         </p>
+                         </div>
+
+
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Rajkumar Yadav:8602518149
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event11Text">POSTER PRESENTATION </p>
+                </div>
+
+                <div class="eventBoxDesktop row2" id="event12">
+                    <div class="eventMask" data-textName="event12" data-overview="
+
+                         This is a part solid modeling competition for 2nd, 3rd and final year students of mechanical and civil engineering.
+                         Participants can use any of solid modeling software and free to bring their own laptop as per convenience. 
+                         We will only provide CREO for solid modeling. This is a time constraint competition.  ." 
+
+                         data-rules="EVENT TIME:10:00AM onwards <br>
+                         DATE:: 18/09/2015 <br>
+                         PLACE:CAE lab (A Block Computer center)<br>
+                         REGISTRATION FEE PER STUDENT: Rs.30/- <br>
+                         PRIZE:- Rs. 1500 (1st prize)<br>
+                         Rs. 1000 ( 2nd prize)
+                         "
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Sawan Soni:7869335117
+                         </p>
+                         </div>
+                         ">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event12Text">CAD COMPETITION</p>
+                </div>
+
+
+
+                <div class="eventBoxDesktop row3" id="event13">
+                    <div class="eventMask" data-textName="event13" data-overview="Learn Hadoop & Cloud computing by IIT-D experts." 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Shubham Geete<br>(8357955787)
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event13Text"><span style="font-size: 24px;">Hadoop & Cloud workshop by IIT Delhi</span></p>
+                </div>
+
+                <div class="eventBoxDesktop row3" id="event14">
+                    <div class="eventMask" data-textName="event14" data-overview=
+                         "An science exhibition for school students and a chance to win exciting prizes." 
+
+                         data-rules="" 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Shubham Geete<br>(8357955787)
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event14Text"><span style="font-size: 20px;">School Science Exhibition and Competition</span></p>
+                </div>
+
+                <div class="eventBoxDesktop row3" id="event15">
+                    <div class="eventMask" data-textName="event15" data-overview="
+					Learn Android developement and then practice by taking part in a competition.
+                         "
+
+                         data-rules="" 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Shubham Geete<br>(8357955787)
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event15Text"><span style="font-size: 20px;">Android Developement Workshop cum Competition</span></p>
+                </div>
+
+                <div class="eventBoxDesktop row3" id="event16">
+                    <div class="eventMask" data-textName="event16" 
+
+                         data-overview="
+                         Theme will be Energy Saving.  Models will be prepared by students before event. On the day of event, 
+                         exhibition will be there. Team Size (1 to 4). Participations may be from any discipline of Engineering." 
+
+                         data-rules="" 
+
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         Shubham Geete<br>(8357955787)
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event16Text">Model Presentation </p>
+                </div>
+
+                <div class="eventBoxDesktop row3" id="event17">
+                    <div class="eventMask" data-textName="event17" data-overview="
+                         Participation-on any Topic, PPT slides cover all topic.<br>
+
+                         1st round-Paper presentation.<br>
+                         2nd round-Questioning.<br>
+                         3rd round-Shortlist as per branch.<br>
+                         4th round-judging.<br>
+                         5th round-Result declaration.<br>
+                         " 
+                         data-rules="REGISTRATION FEE PER EVENT:-50/-Rs."
+                         data-contacts="
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         DEEPAK PANDEY:89872762101
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         MAYUNK KUSHWAH:8109322774
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         NIKHIL CHARAN:8889655525
+                         </p>
+                         </div>
+
+                         <div id='profileCont'>
+                         <p align='center' class='contactContact'>
+                         SAGAR SACHDEV:7566310806
+
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event17Text">PAPER PRESENTATION</p>
+                </div>
+
+                <div class="eventBoxDesktop row3" id="event18">
+                    <div class="eventMask" data-textName="event18" data-overview="
+                         OPEN QUIZ COMPETITION FOR ALL BRANCHES & PARTICIPATION WILL BE DONE BY TEAM OF MAX. 
+                         2 MEMBERS ROUNDS ON BASIC ENGG. SUBJECTS AND CURRENT AFFAIRS." 
+                         data-rules="REGISTRATION FEE  : Rs 50 /- per person"
+                         data-contacts="
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Abhishek Pandey:9424824313
+                         </p>
+                         </div>
+                         <div id='profileCont'>
+
+                         <p align='center' class='contactContact'>
+                         Ashutosh Tiwari:9893501868
+                         </p>
+                         </div>">
+
+                    </div>
+                    <p class="eventsTextDesktop" id="event18Text">TECHNICAL QUIZ </p>
+                </div>
+
+
+
+                
+
+        </div>
+
+        <script>
+            var overview = "Overview Text Here";
+            var rules = "Rules Here";
+            var contacts = "Contacts Here";
+
+            $('.eventMask').mouseenter(function () {
+                $('#' + $(this).attr('data-textName') + "Text").css('bottom', '0px');
+            });
+
+            $('.eventMask').mouseleave(function () {
+                $('#' + $(this).attr('data-textName') + "Text").css('bottom', '-30%');
+            });
+
+            $('.eventMask').click(function () {
+                $('#bodyDesktop').attr('id', 'none');
+                $('#eventBannerContDesktop').css('backgroundImage', $('#' + $(this).attr('data-textName')).css('backgroundImage'));
+                $('#eventHeadingTextDesktop').html($('#' + $(this).attr('data-textName') + "Text").html());
+                overview = $(this).attr('data-overview');
+                $('#typeTextContDesktop').html(overview);
+                $('#typeHeadingContDesktop').html("Overview");
+                rules = $(this).attr('data-rules');
+                contacts = $(this).attr('data-contacts');
+                $('#eventInfoContDesktop').css('left', '0%');
+            });
+
+            $('#closeDesktop').click(function () {
+                $('#none').attr('id', 'bodyDesktop');
+                $('#eventInfoContDesktop').css('left', '-100%');
+            });
+
+            $('#overview').click(function () {
+                $('#typeTextContDesktop').html(overview);
+                $('#typeHeadingContDesktop').html("Overview");
+            });
+
+            $('#rules').click(function () {
+                $('#typeTextContDesktop').html(rules);
+                $('#typeHeadingContDesktop').html("Guidelines");
+            });
+
+            $('#contacts').click(function () {
+                $('#typeTextContDesktop').html(contacts);
+                $('#typeHeadingContDesktop').html("Contact Us");
+            });
+
+            var timeout = null;
+
+            $(document).on('mousemove', function () {
+                if (timeout !== null) {
+                    $('#logoTopDesktop').css('top', '-135px');
+                    clearTimeout(timeout);
+                }
+
+                timeout = setTimeout(function () {
+                    $('#logoTopDesktop').css('top', '0px');
+                }, 400);
+            });
+
+            CursorDivScroll('bodyDesktop', 40, 60);
+        </script>
+        <script>
+            $(document).mousemove(function () {
+                setTimeout(function () {
+                    $('#techAghaaz').css('opacity', '0');
+                    setTimeout(function () {
+                        $('#techAghaaz').css('display', 'none');
+                    }, 1000);
+                }, 1000);
+            });
+        </script>
+    </body>
+</html>
